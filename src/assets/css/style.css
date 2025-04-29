@@ -1,0 +1,252 @@
+/* Reset CSS - Remove estilos padrões dos navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none !important;
+    scrollbar-width: auto;
+    scrollbar-color: var(--scroll-bar) transparent;
+    
+
+
+}
+
+/* Melhor legibilidade e acessibilidade */
+html {
+     /* Facilita o uso de rem (1rem = 10px) */
+    scroll-behavior: smooth;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: TAYLennon;
+    src: url(../fonts/TAYLennon.otf);
+}
+
+@font-face {
+    font-family: Carajillo;
+    src: url(../fonts/Carajillo.otf);
+}
+
+@font-face {
+    font-family: mona-sans;
+    src: url(../fonts/mona-sans-d1bf285e9b9b.woff2);
+}
+
+@font-face {
+    font-family: PP Editorial Old, sans-serif;
+    src: url(../fonts/ppeditorialold-regular.otf);
+
+}
+
+/* Estilo base do body */
+body {
+    color: var(--background-color);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    font-family: "Inter Tight", sans-serif;
+   
+}
+
+/* Removendo estilos padrões de listas */
+ul, ol {
+    list-style: none;
+}
+
+/* Reset de links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+:root {
+    --scroll-bar: rgba(68, 68, 68, 1);
+    --background-scroll: rgba(36,36,36,1); 
+    --background-color: #01110F;
+    --primary-color: #1A7F37;
+    --secondary-color-transparent: #d6dbc865;
+    --secondary-color: #9CAF88;
+    --border-color: #F3EEEA;
+    --bege: #FAF5EF;
+    --font-color:#FAF5EF;    
+    --background-transparent: #01110fb6;       
+    --black-gray: #0a0a0a;
+    --gren: #005eac;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    border: none;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+/* Layout para telas menores */
+@media screen and (max-width: 480px) {
+   
+    .ContainerMobileDesk {
+        background-color: var(--background-color);
+    }
+
+    .NavHeader {
+        z-index: 99;
+        background-color: var(--background-transparent);
+        backdrop-filter: blur(13px);
+        width: 100%;
+        padding: 16px ;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        align-items: center;        
+        border-color: var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+    }
+
+
+    .NavComponent {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .TextureGrain{
+        z-index: 1001;
+        pointer-events: none;
+        background-image: url(https://cdn.prod.website-files.com/6648228cf66f4e82f90e4b07/66482293f66f4e82f90e507a_grain.png);
+        background-size: 300px;
+        position: fixed;
+        inset: 0%;
+    }
+
+    .main-wrapper {
+        font-size: 18px;
+        background-color: var(--background-color);
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        left: 0;
+        right: 0;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .content-wrapper {
+        color: var(--font-color);
+        max-width: min(1440px, 80%);
+        flex: 1;
+        z-index: 2;
+    }
+
+    .label-description {
+        font-size: 17px;
+        font-weight: 500;
+        font-family: mona-sans;
+    }
+
+    .styles-button {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 40px;
+        flex-wrap: wrap;
+        
+    }
+
+    .button-styles {
+        flex: 1;
+        margin-top: 0;
+        margin-bottom: 0;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .button-styles a {
+        max-width: 100%;
+        display: flex;
+        min-width: 100%;
+    }
+
+    .btn-insta {
+        background-color: var(--secondary-color-transparent);
+        border-color: var(--border-color);
+        border-width: 1px;
+        border-radius: 10px;
+        border-style: solid;
+        height: 50px;
+        max-width: 100%;
+        flex: 1;
+        align-self: center;
+        
+        flex-direction: row;
+        justify-content: center;
+        text-decoration: none;
+        box-shadow: none;
+        cursor: pointer;
+        margin-left: 0;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-family: mona-sans;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        padding-left: 16px;
+        padding-right: 16px;
+        color: var(--font-color);
+    }
+
+    .btn-whats {
+        background-color: var(--primary-color);
+        border: none;
+        border-radius: 10px;
+        
+        height: 50px;
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        text-decoration: none;
+        box-shadow: none;
+        cursor: pointer;
+        margin-left: 0;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-family: mona-sans;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        padding-left: 16px;
+        padding-right: 16px;
+        color: var(--font-color);
+    }
+
+    section {
+        aspect-ratio: auto;
+        display: block;
+    }
+
+}
